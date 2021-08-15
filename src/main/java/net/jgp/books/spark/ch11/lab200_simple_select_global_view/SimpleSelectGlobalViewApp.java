@@ -58,8 +58,8 @@ public class SimpleSelectGlobalViewApp {
 
         // without filtering, it's 232
         // filtering out any record that contains a null value in any record, it's 199
-        long number_of_records_unfiltered = df.count();
-        System.out.println("number_of_records=" + number_of_records_unfiltered);
+        long number_of_records = df.count();
+        System.out.println("number_of_records=" + number_of_records);
         // Notice the 'global_temp' tablespace in front of the 'geodata' view name
         Dataset<Row> smallCountriesDf =
                 spark.sql(
